@@ -1,0 +1,124 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<div class="container">
+    <hr />
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" onclick="nuke();">Create New</button><br /><br /> @*kalau tombol ini di klik ntar ngeload otomatis dropdown suppliernya*@
+    <table class="table table-hover" id="table">
+        <thead>
+            <tr>
+                <th>
+                    Date
+                </th>
+                <th>
+                    Score 1
+                </th>
+                <th>
+                    Score 2
+                </th>
+                <th>
+                    Score 3
+                </th>
+                @*<th>
+                        Student
+                    </th>
+                    <th>
+                        Lesson
+                    </th>*@
+                <th>
+                    Employee
+                </th>
+                <th>
+                    Action
+                </th>
+            </tr>
+        </thead>
+        <tbody class="tbody"></tbody>
+    </table>
+</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">×</button>
+                <h4 class="modal-title" id="myModalLabel">District Form</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="Id">Id</label>
+                        <input type="text" class="form-control" id="Id" placeholder="Id" disabled="disabled" />
+                    </div>
+                    <div class="form-group">
+                        <label for="Date">Date</label>
+                        <input type="text" class="form-control" id="Date" maxlength="10" placeholder="Date" />
+                        <span style="color:red" class="error">Valid Date required (ex: mm/dd/yyyy)</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="Score1">Score 1</label>
+                        <input type="number" class="form-control" id="Score1" placeholder="Score1" />
+                        @*<span style="color:red" class="error">Valid score required</span>*@
+                    </div>
+                    <div class="form-group">
+                        <label for="Score2">Score 2</label>
+                        <input type="number" class="form-control" id="Score2" placeholder="Score2" />
+                        @*<span style="color:red" class="error">Valid score required</span>*@
+                    </div>
+                    <div class="form-group">
+                        <label for="Score3">Score 3</label>
+                        <input type="number" class="form-control" id="Score3" placeholder="Score3" />
+                        @*<span style="color:red" class="error">Valid score required</span>*@
+                    </div>
+                    @*<div class="form-group">
+                            <label for="Students_Id">Student</label>
+                            <select id="Student" data-placement="Choose Student" class="form-control">
+                                <option>Select</option>
+                            </select>
+                            <span style="color:red" class="error">Select Student</span>
+                        </div>*@
+                    @*<div class="form-group">
+                            <label for="Lessons_Id">Lesson</label>
+                            <select id="Lesson" data-placement="Choose Lesson" class="form-control">
+                                <option>Select</option>
+                            </select>
+                            <span style="color:red" class="error">Select Lesson</span>
+                        </div>*@
+                    <div class="form-group">
+                        <label for="Employees_Id">Employee</label>
+                        <select id="Employee" data-placement="Choose Employee" class="form-control">
+                            <option>Select</option>
+                        </select>
+                        <span style="color:red" class="error">Select Employee</span>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="Save" onclick="validationInsert();">Save</button>
+                <button type="button" class="btn btn-primary" id="Update" style="display:none;" onclick="validationUpdate();">Update</button>
+                <button type="button" class="btn btn-default" onclick="nuke();" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/Scripts/SweetAlert/sweetalert.min.js"></script>
+    <link href="~/Scripts/SweetAlert/sweetalert.css" rel="stylesheet" />
+    <script src="~/Scripts/DataTable/jquery.dataTables.min.js"></script>
+    <link href="~/Scripts/DataTable/jquery.dataTables.min.css" rel="stylesheet" />
+    <script src="~/Scripts/DatePicker/bootstrap-datepicker.min.js"></script>
+    <link href="~/Scripts/DatePicker/bootstrap-datepicker.min.css" rel="stylesheet" />
+    <script src="~/Scripts/Retrieves/RetrievingDailyScore.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('#Date').datepicker({
+                format: "mm/dd/yyyy"
+            })
+        })
+    </script>
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -1,0 +1,77 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+Layout="~/Views/Shared/HR.cshtml";
+}
+
+<h2>Index</h2>
+
+
+<div class="container">
+    <hr />
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" onclick="nuke();">Create New</button><br /><br /> @*kalau tombol ini di klik ntar ngeload otomatis dropdown suppliernya*@
+    <table class="table table-hover" id="table">
+        <thead>
+            <tr>
+                <th>
+                    Student
+                </th>
+                <th>
+                    Access
+                </th>
+                <th>
+                    Action
+                </th>
+            </tr>
+        </thead>
+        <tbody class="tbody"></tbody>
+    </table>
+</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">×</button>
+                <h4 class="modal-title" id="myModalLabel">Student Access Form</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="Id">Id</label>
+                        <input type="text" class="form-control" id="Id" placeholder="Id" disabled="disabled" />
+                    </div>
+                    <div class="form-group">
+                        <label for="Student">Student</label>
+                        <select id="Student" data-placement="Choose Student" class="form-control">
+                            <option>Select</option>
+                        </select>
+                        <span style="color:red" class="error">Select Student</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="Access">Access</label>
+                        <select id="Access" data-placement="Choose Access" class="form-control">
+                            <option>Select</option>
+                        </select>
+                        <span style="color:red" class="error">Select Access</span>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="Save" onclick="validationInsert();">Save</button>
+                <button type="button" class="btn btn-primary" id="Update" style="display:none;" onclick="validationUpdate();">Update</button>
+                <button type="button" class="btn btn-default" onclick="nuke();" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    <script src="~/Scripts/SweetAlert/sweetalert.min.js"></script>
+    <link href="~/Scripts/SweetAlert/sweetalert.css" rel="stylesheet" />
+    <script src="~/Scripts/DataTable/jquery.dataTables.min.js"></script>
+    <link href="~/Scripts/DataTable/jquery.dataTables.min.css" rel="stylesheet" />
+    <script src="~/Scripts/Retrieves/RetrievingStudentAccess.js"></script>
+    @Scripts.Render("~/bundles/jqueryval")
+}
+

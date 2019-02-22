@@ -1,0 +1,46 @@
+﻿@{
+    ViewBag.Title = "Index";
+Layout="~/Views/Shared/Mentor.cshtml";
+}
+
+<h2>Class</h2>
+
+<div class="container">
+    <hr />
+    <table class="table table-hover" id="table">
+        <thead>
+            <tr>
+
+                <th>
+                    Lesson
+                </th>
+                <th>
+                    Class
+                </th>
+                <th>
+                    Room
+                </th>
+                <th>
+                    Date Start
+                </th>
+                <th>
+                    Date End
+                </th>
+                <th>
+                    Action
+                </th>
+            </tr>
+        </thead>
+        <tbody class="tbody"></tbody>
+    </table>
+</div>
+
+
+@section Scripts {
+<script src="~/Scripts/SweetAlert/sweetalert.min.js"></script>
+<link href="~/Scripts/SweetAlert/sweetalert.css" rel="stylesheet" />
+<script src="~/Scripts/DataTable/jquery.dataTables.min.js"></script>
+<link href="~/Scripts/DataTable/jquery.dataTables.min.css" rel="stylesheet" />
+<script src="~/Scripts/Retrieves/RetrievingViewSchedule.js"></script>
+    @Scripts.Render("~/bundles/jqueryval")
+}

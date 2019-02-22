@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @*@Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })*@
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    
+                    <li>@Html.ActionLink("Employee", "Index", "Employees")</li>
+                    <li>@Html.ActionLink("Student", "Index", "Students")</li>
+                    <li>@Html.ActionLink("Province", "Index", "Provincies")</li>
+                    <li>@Html.ActionLink("Regency", "Index", "Regencies")</li>
+                    <li>@Html.ActionLink("District", "Index", "Districts")</li>
+                    <li>@Html.ActionLink("Village", "Index", "Villages")</li>
+                    <li>@Html.ActionLink("Skill", "Index", "Skills")</li>
+                    <li>@Html.ActionLink("Student Skill", "Index", "SkillStudents")</li>
+                    <li>@Html.ActionLink("Experience", "Index", "WorkExperiences")</li>
+                    <li>@Html.ActionLink("Organization", "Index", "Organizations")</li>
+                    <li>@Html.ActionLink("Achievement", "Index", "Achievements")</li>
+                    <li>@Html.ActionLink("Access", "Index", "Accesses")</li>
+                    <li>@Html.ActionLink("Student Access", "Index", "StudentAccesses")</li>
+                    <li>@Html.ActionLink("Locker", "Index", "Lockers")</li>
+                    <li>@Html.ActionLink("Student Locker", "Index", "StudentLockers")</li>
+                    <li>@Html.ActionLink("Placement", "Index", "Placements")</li>
+                    <li>@Html.ActionLink("History Placement", "Index", "HistoryPlacements")</li>
+                    <li>@Html.ActionLink("Religion", "Index", "Religions")</li>
+                    <li>@Html.ActionLink("University", "Index", "Universities")</li>
+                    <li>@Html.ActionLink("Education", "Index", "HistoryEducations")</li>
+                    <li>@Html.ActionLink("Room", "Index", "Rooms")</li>
+                    <li>@Html.ActionLink("Batch", "Index", "Batches")</li>
+                    <li>@Html.ActionLink("Class", "Index", "Classes")</li>
+                    <li>@Html.ActionLink("Department", "Index", "Departments")</li>
+                    <li>@Html.ActionLink("Error Bank", "ViewErrorBank", "ErrorBanks")</li>
+
+                </ul>
+            </div>
+        </div>
+    
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

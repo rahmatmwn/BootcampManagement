@@ -1,0 +1,16 @@
+﻿using Core;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DataAccess.Model
+{
+    public class StudentLocker : BaseModel
+    {
+        public virtual Locker Lockers { get; set; }
+        public virtual Student Students{ get; set; }
+
+    }
+}

@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C990CDEC-BD06-4EC5-8C87-5602A74B69AE}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BusinessLogic</RootNamespace>
+    <AssemblyName>BusinessLogic</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\IAccessService.cs" />
+    <Compile Include="Service\IAchievementService.cs" />
+    <Compile Include="Service\IBatchService .cs" />
+    <Compile Include="Service\IClassService.cs" />
+    <Compile Include="Service\IDailyScoreService.cs" />
+    <Compile Include="Service\IDepartmentService.cs" />
+    <Compile Include="Service\IDistrictService.cs" />
+    <Compile Include="Service\IEmployeeService.cs" />
+    <Compile Include="Service\IErrorBankService.cs" />
+    <Compile Include="Service\IHistoryEducationService.cs" />
+    <Compile Include="Service\IHistoryPlacementService.cs" />
+    <Compile Include="Service\ILessonService.cs" />
+    <Compile Include="Service\ILockerService.cs" />
+    <Compile Include="Service\IOrganizationService.cs" />
+    <Compile Include="Service\IPlacementService.cs" />
+    <Compile Include="Service\IProvinceService.cs" />
+    <Compile Include="Service\IRegencyService.cs" />
+    <Compile Include="Service\IReligionService.cs" />
+    <Compile Include="Service\IRoomService.cs" />
+    <Compile Include="Service\IScheduleService.cs" />
+    <Compile Include="Service\ISkillService.cs" />
+    <Compile Include="Service\ISkillStudentService.cs" />
+    <Compile Include="Service\IStudentAccessService.cs" />
+    <Compile Include="Service\IStudentLockerService.cs" />
+    <Compile Include="Service\IStudentService.cs" />
+    <Compile Include="Service\IUniversityService.cs" />
+    <Compile Include="Service\IVillageService.cs" />
+    <Compile Include="Service\IWeeklyScoreService.cs" />
+    <Compile Include="Service\IWorkExperienceService.cs" />
+    <Compile Include="Service\Master\AccessService.cs" />
+    <Compile Include="Service\Master\AchievementService.cs" />
+    <Compile Include="Service\Master\BatchService.cs" />
+    <Compile Include="Service\Master\ClassService .cs" />
+    <Compile Include="Service\Master\DailyScoreService.cs" />
+    <Compile Include="Service\Master\DepartmentService.cs" />
+    <Compile Include="Service\Master\DistrictService.cs" />
+    <Compile Include="Service\Master\EmployeeService.cs" />
+    <Compile Include="Service\Master\ErrorBankService.cs" />
+    <Compile Include="Service\Master\HistoryEducationService.cs" />
+    <Compile Include="Service\Master\HistoryPlacementService.cs" />
+    <Compile Include="Service\Master\LessonService.cs" />
+    <Compile Include="Service\Master\LockerService.cs" />
+    <Compile Include="Service\Master\OrganizationService.cs" />
+    <Compile Include="Service\Master\PlacementService.cs" />
+    <Compile Include="Service\Master\ProvinceService.cs" />
+    <Compile Include="Service\Master\RegencyService.cs" />
+    <Compile Include="Service\Master\ReligionService.cs" />
+    <Compile Include="Service\Master\RoomService.cs" />
+    <Compile Include="Service\Master\ScheduleService.cs" />
+    <Compile Include="Service\Master\SkillService.cs" />
+    <Compile Include="Service\Master\SkillStudentService.cs" />
+    <Compile Include="Service\Master\StudentAccessService.cs" />
+    <Compile Include="Service\Master\StudentLockerService.cs" />
+    <Compile Include="Service\Master\StudentService.cs" />
+    <Compile Include="Service\Master\UniversityService.cs" />
+    <Compile Include="Service\Master\VillageService.cs" />
+    <Compile Include="Service\Master\WeeklyScoreService.cs" />
+    <Compile Include="Service\Master\WorkExperienceService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{211f9360-e971-431b-ae50-2d1d83b1ef09}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core\Core.csproj">
+      <Project>{e7e0265d-5f20-4e3b-b296-3aa7aaa01cc2}</Project>
+      <Name>Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataAccess\DataAccess.csproj">
+      <Project>{eeabee78-a801-4d5f-b63d-52eac59eb522}</Project>
+      <Name>DataAccess</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

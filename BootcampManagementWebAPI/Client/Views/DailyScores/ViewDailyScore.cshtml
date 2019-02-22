@@ -1,0 +1,52 @@
+﻿@{
+    ViewBag.Title = "Index";
+Layout="~/Views/Shared/Manager.cshtml";
+}
+
+<h2>Index</h2>
+
+<div class="container">
+    <hr />
+    <table class="table table-hover" id="table">
+        <thead>
+            <tr>
+                <th>
+                    Date
+                </th>
+                <th>
+                    Score 1
+                </th>
+                <th>
+                    Score 2
+                </th>
+                <th>
+                    Score 3
+                </th>
+                @*
+                <th>
+                    Student
+                </th>
+                <th>
+                    Lesson
+                </th>*@
+                <th>
+                    Employee
+                </th>
+                <th>
+                    Action
+                </th>
+            </tr>
+        </thead>
+        <tbody class="tbody"></tbody>
+    </table>
+</div>
+
+
+@section Scripts {
+<script src="~/Scripts/SweetAlert/sweetalert.min.js"></script>
+<link href="~/Scripts/SweetAlert/sweetalert.css" rel="stylesheet" />
+<script src="~/Scripts/DataTable/jquery.dataTables.min.js"></script>
+<link href="~/Scripts/DataTable/jquery.dataTables.min.css" rel="stylesheet" />
+<script src="~/Scripts/Retrieves/RetrievingViewScoreDaily.js"></script>
+    @Scripts.Render("~/bundles/jqueryval")
+}

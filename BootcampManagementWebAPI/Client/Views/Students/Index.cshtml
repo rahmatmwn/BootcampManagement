@@ -1,0 +1,228 @@
+﻿@{
+    ViewBag.Title = "Index";
+Layout="~/Views/Shared/HR.cshtml";
+}
+
+<h2>Student</h2>
+
+<div class="container">
+    <hr />
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" onclick="nuke();">Create New</button><br /><br /> @*kalau tombol ini di klik ntar ngeload otomatis dropdown suppliernya*@
+    <table class="table table-hover" id="table">
+        <thead>
+            <tr>
+
+                <th>
+                    First Name
+                </th>
+                <th>
+                    Last Name
+                </th>
+                <th>
+                    Place Birth
+                </th>
+                <th>
+                    Date Birth
+                </th>
+                <th>
+                    Gender
+                </th>
+                <th>
+                    Address
+                </th>
+                <th>
+                    Phone
+                </th>
+                <th>
+                    Email
+                </th>
+                <th>
+                    Status
+                </th>
+
+                <th>
+                    Hiring
+                </th>
+                <th>
+                    Class
+                </th>
+                <th>
+                    Religion
+                </th>
+                <th>
+                    Village
+                </th>
+                <th>
+                    Action
+                </th>
+            </tr>
+        </thead>
+        <tbody class="tbody"></tbody>
+    </table>
+</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">×</button>
+                <h4 class="modal-title" id="myModalLabel">Class Form</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="Id">Id</label>
+                        <input type="text" class="form-control" id="Id" placeholder="Id" disabled="disabled" />
+                    </div>
+                    <div class="form-group">
+                        <label for="FirstName">First Name</label>
+                        <input type="text" class="form-control" id="FirstName" placeholder="FirstName" />
+                        <span style="color:red" class="error">Valid First Name required</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="LastName">Last Name</label>
+                        <input type="text" class="form-control" id="LastName" placeholder="LastName" />
+                        <span style="color:red" class="error">Valid Last Name required</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="Email">Email</label>
+                        <input type="text" class="form-control" id="Email" placeholder="Email" />
+                        <span style="color:red" class="error">Valid Email required</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="Username">Username</label>
+                        <input type="text" class="form-control" id="Username" placeholder="Username" />
+                        <span style="color:red" class="error">Valid Username required</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="Password">Password</label>
+                        <input type="text" class="form-control" id="Password" placeholder="Password" />
+                        <span style="color:red" class="error">Valid Password required</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="Class">Class</label>
+                        <select id="Class" data-placement="Choose Class" class="form-control">
+                            <option>Select</option>
+                        </select>
+                        <span style="color:red" class="error">Select Class</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="PlaceOfBirth">Place Of Birth</label>
+                        <input type="text" class="form-control" id="PlaceOfBirth" placeholder="PlaceOfBirth" />
+                        <span style="color:red" class="error">Valid Place Of Birth required</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="DateOfBirth">Date of Birth</label>
+                        <input type="text" class="form-control" id="DateOfBirth" placeholder="Date Of Birth" />
+                        <span style="color:red" class="error">Valid Date of Birth required (ex: mm/dd/yyyy)</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Gender">Gender</label>
+                        <select id="Gender" data-placement="Choose Gender" class="form-control">
+                            <option value="0">Select</option>
+                            <option value="L">L</option>
+                            <option value="P">P</option>
+                        </select>
+                        <span style="color:red" class="error">Select Gender</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="SecretQuestion">Secret Question</label>
+                        <select id="SecretQuestion" data-placement="Choose Secret Question" class="form-control">
+                            <option value="0">Select</option>
+                            <option value="Name Anime Favorite?">Name Anime Favorite?</option>
+                            <option value="Name of pet?">Name of pet?</option>
+                        </select>
+                        <span style="color:red" class="error">Select Secret Question</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="SecretAnswer">Secret Answer</label>
+                        <input type="text" class="form-control" id="SecretAnswer" placeholder="SecretAnswer" />
+                        <span style="color:red" class="error">Valid Secret Answer required</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="Address">Address</label>
+                        <input type="text" class="form-control" id="Address" placeholder="Address" />
+                        <span style="color:red" class="error">Valid Address required</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="Phone">Phone</label>
+                        <input type="number" class="form-control" id="Phone" placeholder="Phone" />
+                        <span style="color:red" class="error">Valid Phone required</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Status">Status</label>
+                        <input type="text" class="form-control" id="Status" placeholder="Status" />
+                        <span style="color:red" class="error">Valid Status required</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="HiringLocation">Hiring Location</label>
+                        <input type="text" class="form-control" id="HiringLocation" placeholder="HiringLocation" />
+                        <span style="color:red" class="error">Valid Hiring Location required</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="Religion">Religion</label>
+                        <select id="Religion" data-placement="Choose Religion" class="form-control">
+                            <option>Select Religion</option>
+                        </select>
+                        <span style="color:red" class="error">Select Religion</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="Province">Province</label>
+                        <select id="Province" data-placement="Choose Province" class="form-control" onloadeddata="LoadRegency()">
+                            <option value="0">Select Province</option>
+                        </select>
+                        <span style="color:red" class="error">Select Province</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="Regency">Regency</label>
+                        <select id="Regency" data-placement="Choose Regency" class="form-control" onchange="LoadDistrict()">
+                            <option value="0">Select Reegency</option>
+                        </select>
+                        <span style="color:red" class="error">Select Regency</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="District">District</label>
+                        <select id="District" data-placement="Choose District" class="form-control" onchange="LoadVillage()">
+                            <option value="0">Select District</option>
+                        </select>
+                        <span style="color:red" class="error">Select District</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="Village">Village</label>
+                        <select id="Village" data-placement="Choose Village" class="form-control">
+                            <option value="0">Select Village</option>
+                        </select>
+                        <span style="color:red" class="error">Select Village</span>
+                    </div>
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="Save" onclick="validationInsert();">Save</button>
+                <button type="button" class="btn btn-primary" id="Update" style="display:none;" onclick="validationUpdate();">Update</button>
+                <button type="button" class="btn btn-default" onclick="nuke();" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+<script src="~/Scripts/SweetAlert/sweetalert.min.js"></script>
+<link href="~/Scripts/SweetAlert/sweetalert.css" rel="stylesheet" />
+<script src="~/Scripts/DataTable/jquery.dataTables.min.js"></script>
+<link href="~/Scripts/DataTable/jquery.dataTables.min.css" rel="stylesheet" />
+<script src="~/Scripts/Retrieves/RetrievingStudent.js"></script>
+<script src="~/Scripts/DatePicker/bootstrap-datepicker.min.js"></script>
+<link href="~/Scripts/DatePicker/bootstrap-datepicker.min.css" rel="stylesheet" />
+<script type="text/javascript">
+    $(function () {
+        $('#DateOfBirth').datepicker({
+            format: "mm/dd/yyyy"
+        })
+    })
+</script>
+    @Scripts.Render("~/bundles/jqueryval")
+}

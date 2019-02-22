@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{211F9360-E971-431B-AE50-2D1D83B1EF09}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Common</RootNamespace>
+    <AssemblyName>Common</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Interface\IAccessRepository.cs" />
+    <Compile Include="Interface\IAchievementRepository.cs" />
+    <Compile Include="Interface\IBatchRepository .cs" />
+    <Compile Include="Interface\IClassRepository.cs" />
+    <Compile Include="Interface\IDailyScoreRepository.cs" />
+    <Compile Include="Interface\IDepartmentRepository.cs" />
+    <Compile Include="Interface\IDistrictRepository.cs" />
+    <Compile Include="Interface\IEmployeeRepository.cs" />
+    <Compile Include="Interface\IErrorBankRepository.cs" />
+    <Compile Include="Interface\IHistoryEducationRepository.cs" />
+    <Compile Include="Interface\IHistoryPlacementRepository.cs" />
+    <Compile Include="Interface\ILessonRepository.cs" />
+    <Compile Include="Interface\ILockerRepository.cs" />
+    <Compile Include="Interface\IOrganizationRepository.cs" />
+    <Compile Include="Interface\IPlacementRepository.cs" />
+    <Compile Include="Interface\IProvinceRepository.cs" />
+    <Compile Include="Interface\IRegencyRepository.cs" />
+    <Compile Include="Interface\IReligionRepository.cs" />
+    <Compile Include="Interface\IRoomRepository.cs" />
+    <Compile Include="Interface\IScheduleRepository.cs" />
+    <Compile Include="Interface\ISkillRepository .cs" />
+    <Compile Include="Interface\ISkillStudentRepository.cs" />
+    <Compile Include="Interface\IStudentAccessRepository.cs" />
+    <Compile Include="Interface\IStudentLockerRepository.cs" />
+    <Compile Include="Interface\IStudentRepository.cs" />
+    <Compile Include="Interface\IVillageRepository.cs" />
+    <Compile Include="Interface\IWeeklyScoreRepository.cs" />
+    <Compile Include="Interface\IWorkExperienceRepository.cs" />
+    <Compile Include="Interface\Master\AccessRepository.cs" />
+    <Compile Include="Interface\Master\AchievementRepository.cs" />
+    <Compile Include="Interface\Master\BatchRepository.cs" />
+    <Compile Include="Interface\Master\ClassRepository.cs" />
+    <Compile Include="Interface\Master\DailyScoreRepository.cs" />
+    <Compile Include="Interface\Master\DepartmentRepository.cs" />
+    <Compile Include="Interface\Master\DistrictRepository.cs" />
+    <Compile Include="Interface\Master\EmployeeRepository.cs" />
+    <Compile Include="Interface\Master\ErrorBankRepository.cs" />
+    <Compile Include="Interface\Master\HistoryEducationRepository.cs" />
+    <Compile Include="Interface\IUniversityRepository.cs" />
+    <Compile Include="Interface\Master\HistoryPlacementRepository.cs" />
+    <Compile Include="Interface\Master\LessonRepository.cs" />
+    <Compile Include="Interface\Master\LockerRepository.cs" />
+    <Compile Include="Interface\Master\OrganizationRepository.cs" />
+    <Compile Include="Interface\Master\PlacementRepository.cs" />
+    <Compile Include="Interface\Master\ProvinceRepository.cs" />
+    <Compile Include="Interface\Master\RegencyRepository.cs" />
+    <Compile Include="Interface\Master\ReligionRepository.cs" />
+    <Compile Include="Interface\Master\RoomRepository.cs" />
+    <Compile Include="Interface\Master\ScheduleRepository.cs" />
+    <Compile Include="Interface\Master\SkillRepository.cs" />
+    <Compile Include="Interface\Master\SkillStudentRepository.cs" />
+    <Compile Include="Interface\Master\StudentAccessRepository.cs" />
+    <Compile Include="Interface\Master\StudentLockerRepository.cs" />
+    <Compile Include="Interface\Master\StudentRepository.cs" />
+    <Compile Include="Interface\Master\UniversityRepository.cs" />
+    <Compile Include="Interface\Master\VillageRepository.cs" />
+    <Compile Include="Interface\Master\WeeklyScoreRepository.cs" />
+    <Compile Include="Interface\Master\WorkExperienceRepository.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Core\Core.csproj">
+      <Project>{e7e0265d-5f20-4e3b-b296-3aa7aaa01cc2}</Project>
+      <Name>Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataAccess\DataAccess.csproj">
+      <Project>{eeabee78-a801-4d5f-b63d-52eac59eb522}</Project>
+      <Name>DataAccess</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

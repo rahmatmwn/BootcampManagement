@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EEABEE78-A801-4D5F-B63D-52EAC59EB522}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DataAccess</RootNamespace>
+    <AssemblyName>DataAccess</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Context\MyContext.cs" />
+    <Compile Include="Migrations\201902180314011_up.cs" />
+    <Compile Include="Migrations\201902180314011_up.Designer.cs">
+      <DependentUpon>201902180314011_up.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902180435433_addemp.cs" />
+    <Compile Include="Migrations\201902180435433_addemp.Designer.cs">
+      <DependentUpon>201902180435433_addemp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902180659557_student.cs" />
+    <Compile Include="Migrations\201902180659557_student.Designer.cs">
+      <DependentUpon>201902180659557_student.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902180710271_upstudent.cs" />
+    <Compile Include="Migrations\201902180710271_upstudent.Designer.cs">
+      <DependentUpon>201902180710271_upstudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902180753581_updatestu.cs" />
+    <Compile Include="Migrations\201902180753581_updatestu.Designer.cs">
+      <DependentUpon>201902180753581_updatestu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902180759302_addd.cs" />
+    <Compile Include="Migrations\201902180759302_addd.Designer.cs">
+      <DependentUpon>201902180759302_addd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902211422137_a.cs" />
+    <Compile Include="Migrations\201902211422137_a.Designer.cs">
+      <DependentUpon>201902211422137_a.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902211835107_b.cs" />
+    <Compile Include="Migrations\201902211835107_b.Designer.cs">
+      <DependentUpon>201902211835107_b.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Model\Access.cs" />
+    <Compile Include="Model\Achievement.cs" />
+    <Compile Include="Model\Batch.cs" />
+    <Compile Include="Model\Class.cs" />
+    <Compile Include="Model\DailyScore.cs" />
+    <Compile Include="Model\Department.cs" />
+    <Compile Include="Model\District.cs" />
+    <Compile Include="Model\Employee.cs" />
+    <Compile Include="Model\ErrorBank.cs" />
+    <Compile Include="Model\HistoryEducation.cs" />
+    <Compile Include="Model\HistoryPlacement.cs" />
+    <Compile Include="Model\Image.cs" />
+    <Compile Include="Model\Lesson.cs" />
+    <Compile Include="Model\Locker.cs" />
+    <Compile Include="Model\Organization.cs" />
+    <Compile Include="Model\Placement.cs" />
+    <Compile Include="Model\Province.cs" />
+    <Compile Include="Model\Regency.cs" />
+    <Compile Include="Model\Religion.cs" />
+    <Compile Include="Model\Room.cs" />
+    <Compile Include="Model\Schedule.cs" />
+    <Compile Include="Model\Skill.cs" />
+    <Compile Include="Model\SkillStudent.cs" />
+    <Compile Include="Model\Student.cs" />
+    <Compile Include="Model\StudentAccess.cs" />
+    <Compile Include="Model\StudentLocker.cs" />
+    <Compile Include="Model\University.cs" />
+    <Compile Include="Model\Village.cs" />
+    <Compile Include="Model\WeeklyScore.cs" />
+    <Compile Include="Model\WorkExperience.cs" />
+    <Compile Include="Param\AccessParam.cs" />
+    <Compile Include="Param\AchievementParam.cs" />
+    <Compile Include="Param\BatchParam.cs" />
+    <Compile Include="Param\ClassParam.cs" />
+    <Compile Include="Param\DailyScoreParam.cs" />
+    <Compile Include="Param\DepartmentParam.cs" />
+    <Compile Include="Param\DistrictParam.cs" />
+    <Compile Include="Param\EmployeeParam.cs" />
+    <Compile Include="Param\ErrorBankParam.cs" />
+    <Compile Include="Param\HistoryEducationParam.cs" />
+    <Compile Include="Param\HistoryPlacementParam.cs" />
+    <Compile Include="Param\ImageParam.cs" />
+    <Compile Include="Param\LessonParam.cs" />
+    <Compile Include="Param\LockerParam.cs" />
+    <Compile Include="Param\OrganizationParam.cs" />
+    <Compile Include="Param\PlacementParam.cs" />
+    <Compile Include="Param\ProvinceParam.cs" />
+    <Compile Include="Param\RegencyParam.cs" />
+    <Compile Include="Param\ReligionParam.cs" />
+    <Compile Include="Param\RoomParam.cs" />
+    <Compile Include="Param\ScheduleParam.cs" />
+    <Compile Include="Param\SkillParam.cs" />
+    <Compile Include="Param\SkillStudentParam.cs" />
+    <Compile Include="Param\StudentAccessParam.cs" />
+    <Compile Include="Param\StudentLockerParam.cs" />
+    <Compile Include="Param\StudentParam.cs" />
+    <Compile Include="Param\UniversityParam.cs" />
+    <Compile Include="Param\VillageParam.cs" />
+    <Compile Include="Param\WeeklyScoreParam.cs" />
+    <Compile Include="Param\WorkExperienceParam.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Core\Core.csproj">
+      <Project>{e7e0265d-5f20-4e3b-b296-3aa7aaa01cc2}</Project>
+      <Name>Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201902180314011_up.resx">
+      <DependentUpon>201902180314011_up.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902180435433_addemp.resx">
+      <DependentUpon>201902180435433_addemp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902180659557_student.resx">
+      <DependentUpon>201902180659557_student.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902180710271_upstudent.resx">
+      <DependentUpon>201902180710271_upstudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902180753581_updatestu.resx">
+      <DependentUpon>201902180753581_updatestu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902180759302_addd.resx">
+      <DependentUpon>201902180759302_addd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902211422137_a.resx">
+      <DependentUpon>201902211422137_a.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902211835107_b.resx">
+      <DependentUpon>201902211835107_b.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

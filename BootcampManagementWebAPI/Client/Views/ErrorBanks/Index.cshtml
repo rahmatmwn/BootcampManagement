@@ -1,0 +1,98 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Error Bank</h2>
+
+<div class="container">
+    <hr />
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" onclick="nuke();">Create New</button><br /><br /> @*kalau tombol ini di klik ntar ngeload otomatis dropdown suppliernya*@
+    <table class="table table-hover" id="table">
+        <thead>
+            <tr>
+                <th>
+                    Student
+                </th>
+                <th>
+                    Message
+                </th>
+                <th>
+                    Description
+                </th>
+                <th>
+                    Solution
+                </th>
+                <th>
+                    Department
+                </th>
+                <th>
+                    Date
+                </th>
+                <th>
+                    Action
+                </th>
+            </tr>
+        </thead>
+        <tbody class="tbody"></tbody>
+    </table>
+</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">×</button>
+                <h4 class="modal-title" id="myModalLabel">Error Bank Form</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="Id">Id</label>
+                        <input type="text" class="form-control" id="Id" placeholder="Id" disabled="disabled" />
+                    </div>
+                    <div class="form-group">
+                        <label for="Student">Student Id</label>
+                        <input type="text" class="form-control" id="Student" placeholder="Student" />
+                    </div>
+                    <div class="form-group">
+                        <label for="Message">Message</label>
+                        <input type="text" class="form-control" id="Message" placeholder="Message" />
+                        <span style="color:red" class="error">Valid Message required</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="Description">Description</label>
+                        <input type="text" class="form-control" id="Description" placeholder="Description" />
+                        <span style="color:red" class="error">Valid Description required</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="Solution">Solution</label>
+                        <input type="text" class="form-control" id="Solution" placeholder="Solution" />
+                        <span style="color:red" class="error">Valid Solution required</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="Department_Id">Department</label>
+                        <select id="Department" data-placement="Choose Department" class="form-control">
+                            <option>Select</option>
+                        </select>
+                        <span style="color:red" class="error">Select Department</span>
+                    </div>
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="Save" onclick="validationInsert();">Save</button>
+                <button type="button" class="btn btn-primary" id="Update" style="display:none;" onclick="validationUpdate();">Update</button>
+                <button type="button" class="btn btn-default" onclick="nuke();" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+<script src="~/Scripts/SweetAlert/sweetalert.min.js"></script>
+<link href="~/Scripts/SweetAlert/sweetalert.css" rel="stylesheet" />
+<script src="~/Scripts/DataTable/jquery.dataTables.min.js"></script>
+<link href="~/Scripts/DataTable/jquery.dataTables.min.css" rel="stylesheet" />
+<script src="~/Scripts/Retrieves/RetrievingErrorBank.js"></script>
+    @Scripts.Render("~/bundles/jqueryval")
+}
